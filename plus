@@ -4,14 +4,24 @@
 import sys
 
 ans = 0.0
+has_input = False
 
 for line in sys.stdin:
     line = line.strip()
     if line == "":
-        continue
+        # 空行が来たらエラー扱い（テスト仕様）
+        print("", end="")
+        sys.exit(1)
     try:
         ans += float(line)
+        has_input = True
     except ValueError:
+        print("", end="")
         sys.exit(1)
 
-print(ans)
+if has_input:
+    print(ans)
+else:
+    # 入力なし（空）はエラー扱い
+    print("", end="")
+    sys.exit(1)
