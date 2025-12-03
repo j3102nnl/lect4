@@ -1,10 +1,17 @@
 #!/usr/bin/python3
 # SPDX-FileCopyrightText: 2022 Ryuichi Ueda
-#SPDX-License-Identifier: BSD-3-Clause
+# SPDX-License-Identifier: BSD-3-Clause
 import sys
 
-ans = 0
+ans = 0.0
+
 for line in sys.stdin:
+    line = line.strip()
+    if line == "":
+        continue
+    try:
         ans += float(line)
+    except ValueError:
+        sys.exit(1)
 
 print(ans)
