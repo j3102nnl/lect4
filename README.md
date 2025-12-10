@@ -1,5 +1,3 @@
-*このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
-*　2022 Ryuichi Ueda
 # plusコマンド
 
 ![test](https://github.com/j3102nnl/lect4/actions/workflows/test.yml/badge.svg)
@@ -12,3 +10,5 @@
 
 ## テスト環境
 * Ubuntu
+
+© 2022 Hiroki Hayashi
